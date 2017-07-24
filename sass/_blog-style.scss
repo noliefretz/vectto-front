@@ -1,0 +1,33 @@
+#blog{
+
+	#blog-holder{
+
+		.blog-item{
+
+			background: #fff;
+			border: 1px solid #d7d7d7;
+
+			h2{
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			p{
+				margin-top: 25px;
+				margin-bottom: 25px; 
+			}
+
+			.blog-item-details{
+				padding: 35px;
+			}
+
+			.blogitem-featured{
+				background: #f7f7f7;
+				min-height: 175px;
+			}
+
+		}
+
+	}
+
+}
