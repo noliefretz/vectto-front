@@ -6113,7 +6113,7 @@ input[type="button"].btn-block {
   margin: 0 auto;
 }
 .single-blog .date {
-  margin-top: 110px;
+  margin-top: 60px;
   font-weight: bold;
 }
 .single-blog h2 {
@@ -6139,6 +6139,7 @@ input[type="button"].btn-block {
   box-shadow: 0 0 8px #ccc;
   padding: 50px;
   position: relative;
+  margin-top: 50px;
 }
 .single-blog blockquote p {
   font-style: italic;
@@ -6164,8 +6165,8 @@ input[type="button"].btn-block {
 }
 .single-blog .sns {
   list-style: none;
-  padding-top: 80px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #dcdcdc;
   margin-bottom: 30px;
   position: relative;
@@ -6178,6 +6179,9 @@ input[type="button"].btn-block {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+.single-blog .sns ul {
+  padding-left: 0;
 }
 .single-blog .sns li {
   display: inline-block;
@@ -6192,6 +6196,49 @@ input[type="button"].btn-block {
 }
 .single-blog .sns li a.liked {
   color: #2d75fd;
+}
+.single-blog .comment-section .head a, .single-blog .comment-section .head p {
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.single-blog .comment-section .body form {
+  border: 1px solid #d7d7d7;
+}
+.single-blog .comment-section .body form textarea {
+  border: 0;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 15px;
+}
+.single-blog .comment-section .body form .btn-group {
+  text-align: right;
+}
+.single-blog .comment-section .body form .btn-group ul {
+  padding-left: 0;
+  list-style: none;
+}
+.single-blog .comment-section .body form .btn-group ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.single-blog .comment-section .body form .btn-group .btn-preview {
+  text-transform: uppercase;
+  color: #777;
+}
+.single-blog .comment-section .body form .btn-group .btn-submit {
+  border-radius: 0;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0;
+  background: #2d75fd;
+  color: #fff;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid #2d75fd;
 }
 
 #free-design-pack {

@@ -122,7 +122,7 @@
 	max-width: 680px;
 	margin: 0 auto;
 	.date{
-		margin-top: 110px;
+		margin-top: 60px;
 		font-weight: bold;
 	}
 	h2{
@@ -148,6 +148,7 @@
 		box-shadow: 0 0 8px #ccc;
 		padding: 50px;
 		position: relative;
+		margin-top: 50px;
 		p{
 			font-style: italic;
 			color: #000;
@@ -173,8 +174,8 @@
 	}
 	.sns{
 		list-style: none;
-		padding-top: 80px;
-		padding-bottom: 30px;
+		padding-top: 50px;
+		padding-bottom: 20px;
 		border-bottom: 1px solid #dcdcdc;
 		margin-bottom: 30px;
 		position: relative;
@@ -187,6 +188,9 @@
 			left: 0;
 			bottom: 0;
 		}
+		ul{
+			padding-left: 0;		
+		}
 		li{
 			display: inline-block;
 			padding-left: 10px;
@@ -198,6 +202,55 @@
 				font-size: 12px;
 				&.liked{
 					color: $brand-secondary;
+				}
+			}
+		}
+	}
+	.comment-section{
+		.head{
+			a,p{
+				color: #777;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+		}
+		.body{
+			form{
+				border: 1px solid #d7d7d7;
+				textarea{
+					border: 0;
+					width: 100%;
+					height: 150px;
+					resize: none;
+					padding: 15px;
+				}
+				.btn-group{
+					text-align: right;
+					ul{
+						padding-left: 0;
+						list-style: none;
+						li{
+							display: inline-block;
+							margin-right: 15px;
+						}
+					}
+					.btn-preview{
+						text-transform: uppercase;
+						color: #777;
+					}
+					.btn-submit{
+						border-radius: 0;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						padding: 0;
+						background: $brand-secondary;
+						color: #fff;
+						text-transform: uppercase;
+						padding-left: 15px;
+						padding-right: 15px;
+						border: 1px solid $brand-secondary;
+					}
 				}
 			}
 		}
