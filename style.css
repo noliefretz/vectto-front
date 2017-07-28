@@ -6315,5 +6315,176 @@ input[type="button"].btn-block {
     padding: 30px;
   }
 }
+#login,
+#signup {
+  padding-top: 50px;
+}
+#login h1,
+#signup h1 {
+  margin-bottom: 30px;
+}
+#login form,
+#signup form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+#login .form-group,
+#signup .form-group {
+  position: relative;
+}
+#login .form-group input[type="email"],
+#login .form-group input[type="password"],
+#login .form-group input[type="text"],
+#signup .form-group input[type="email"],
+#signup .form-group input[type="password"],
+#signup .form-group input[type="text"] {
+  height: 45px;
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  box-shadow: none;
+  transition: all 0.4s ease-in-out;
+}
+#login .form-group input[type="email"]:focus,
+#login .form-group input[type="password"]:focus,
+#login .form-group input[type="text"]:focus,
+#signup .form-group input[type="email"]:focus,
+#signup .form-group input[type="password"]:focus,
+#signup .form-group input[type="text"]:focus {
+  box-shadow: 0 0 8px #d8d8d8;
+}
+#login .form-group.checkbox,
+#signup .form-group.checkbox {
+  text-align: center;
+  padding: 0;
+  width: 250px;
+  margin: 0 auto;
+}
+#login .form-group.checkbox label,
+#signup .form-group.checkbox label {
+  color: #777;
+  display: block;
+}
+#login .form-group.checkbox label:before,
+#signup .form-group.checkbox label:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  position: absolute;
+  top: 1.5px;
+  left: 0;
+  z-index: 1;
+}
+#login .form-group.checkbox label:after,
+#signup .form-group.checkbox label:after {
+  content: '';
+  width: 5px;
+  height: 10px;
+  border-right: 2px solid #c3c3c3;
+  border-bottom: 2px solid #c3c3c3;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  z-index: 2;
+  transform: rotate(50deg);
+}
+#login .form-group.checkbox input[type="checkbox"],
+#signup .form-group.checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+#login .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
+#signup .form-group.checkbox input[type="checkbox"]:checked ~ label:before {
+  border-color: #2d75fd;
+  background: #2d75fd;
+}
+#login .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
+#signup .form-group.checkbox input[type="checkbox"]:checked ~ label:after {
+  border-color: #fff;
+}
+#login a,
+#signup a {
+  color: #2d75fd;
+}
+#login button.btn,
+#signup button.btn {
+  width: 100%;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  font-size: 16px;
+  margin: 20px 0;
+  transition: all 0.2s ease-in-out;
+}
+#login .illustration,
+#signup .illustration {
+  width: 100%;
+  max-width: 496px;
+  margin: 0 auto;
+}
+#login .illustration img,
+#signup .illustration img {
+  width: 100%;
+  height: auto;
+}
+
+#signup {
+  position: relative;
+  padding-bottom: 110px;
+}
+#signup .form-group.checkbox {
+  width: 290px;
+}
+#signup .illustration {
+  width: 100%;
+  max-width: 100%;
+}
+#signup .illustration img {
+  width: 100%;
+  height: auto;
+}
+#signup .illustration .left {
+  width: 473px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#signup .illustration .right {
+  width: 510px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* responsive */
+@media screen and (max-width: 991px) {
+  #signup .illustration .left {
+    width: 350px;
+  }
+  #signup .illustration .right {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #signup .illustration .left {
+    display: none;
+  }
+  #signup .illustration .right {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: static;
+    top: auto;
+    right: auto;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
