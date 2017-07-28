@@ -238,6 +238,7 @@ input[type="checkbox"],
 
 @include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
 
+@include input-size('.input-xlg', $input-height-xlarge, $padding-xlarge-vertical, $padding-xlarge-horizontal, $font-size-xlarge, $line-height-xlarge, $border-radius-xlarge);
 
 // Form control feedback states
 //
@@ -361,3 +362,5 @@ input[type="checkbox"],
     }
   }
 }
+
+
