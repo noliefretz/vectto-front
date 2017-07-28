@@ -39,7 +39,8 @@
 
 #login,
 #signup,
-#setNewPassword{
+#setNewPassword,
+#forgotPassword{
 	padding-top: 50px;
 	h1{
 		margin-bottom: 30px;
@@ -204,7 +205,8 @@
 
 }
 
-#setNewPassword{
+#setNewPassword,
+#forgotPassword{
 	.illustration{
 		width: 100%;
 		max-width: 390px;
@@ -219,6 +221,9 @@
 			margin: 0 auto;
 			left: -40px;
 		}
+	}
+	p{
+		font-size: 12px;
 	}
 }
 
@@ -252,10 +257,17 @@
 			}
 		}
 	}
-	#setNewPassword{
+	#setNewPassword,
+	#forgotPassword{
 		padding: 0 15px;
 		.vectto-path{
 			left: auto !important;
+		}
+	}
+	#forgotPassword{
+		.pull-left,
+		.pull-right{
+			float: none !important;
 		}
 	}
 }

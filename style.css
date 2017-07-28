@@ -7217,24 +7217,28 @@ input[type="button"].btn-block {
 
 #login,
 #signup,
-#setNewPassword {
+#setNewPassword,
+#forgotPassword {
   padding-top: 50px;
 }
 #login h1,
 #signup h1,
-#setNewPassword h1 {
+#setNewPassword h1,
+#forgotPassword h1 {
   margin-bottom: 30px;
 }
 #login form,
 #signup form,
-#setNewPassword form {
+#setNewPassword form,
+#forgotPassword form {
   max-width: 400px;
   margin: 0 auto;
   padding-bottom: 30px;
 }
 #login .form-group,
 #signup .form-group,
-#setNewPassword .form-group {
+#setNewPassword .form-group,
+#forgotPassword .form-group {
   position: relative;
 }
 #login .form-group input[type="email"],
@@ -7245,7 +7249,10 @@ input[type="button"].btn-block {
 #signup .form-group input[type="text"],
 #setNewPassword .form-group input[type="email"],
 #setNewPassword .form-group input[type="password"],
-#setNewPassword .form-group input[type="text"] {
+#setNewPassword .form-group input[type="text"],
+#forgotPassword .form-group input[type="email"],
+#forgotPassword .form-group input[type="password"],
+#forgotPassword .form-group input[type="text"] {
   height: 45px;
   width: 100%;
   border: 1px solid #d8d8d8;
@@ -7261,12 +7268,16 @@ input[type="button"].btn-block {
 #signup .form-group input[type="text"]:focus,
 #setNewPassword .form-group input[type="email"]:focus,
 #setNewPassword .form-group input[type="password"]:focus,
-#setNewPassword .form-group input[type="text"]:focus {
+#setNewPassword .form-group input[type="text"]:focus,
+#forgotPassword .form-group input[type="email"]:focus,
+#forgotPassword .form-group input[type="password"]:focus,
+#forgotPassword .form-group input[type="text"]:focus {
   box-shadow: 0 0 8px #d8d8d8;
 }
 #login .form-group.checkbox,
 #signup .form-group.checkbox,
-#setNewPassword .form-group.checkbox {
+#setNewPassword .form-group.checkbox,
+#forgotPassword .form-group.checkbox {
   text-align: center;
   padding: 0;
   width: 250px;
@@ -7274,13 +7285,15 @@ input[type="button"].btn-block {
 }
 #login .form-group.checkbox label,
 #signup .form-group.checkbox label,
-#setNewPassword .form-group.checkbox label {
+#setNewPassword .form-group.checkbox label,
+#forgotPassword .form-group.checkbox label {
   color: #777;
   display: block;
 }
 #login .form-group.checkbox label:before,
 #signup .form-group.checkbox label:before,
-#setNewPassword .form-group.checkbox label:before {
+#setNewPassword .form-group.checkbox label:before,
+#forgotPassword .form-group.checkbox label:before {
   content: '';
   width: 15px;
   height: 15px;
@@ -7293,7 +7306,8 @@ input[type="button"].btn-block {
 }
 #login .form-group.checkbox label:after,
 #signup .form-group.checkbox label:after,
-#setNewPassword .form-group.checkbox label:after {
+#setNewPassword .form-group.checkbox label:after,
+#forgotPassword .form-group.checkbox label:after {
   content: '';
   width: 5px;
   height: 10px;
@@ -7307,7 +7321,8 @@ input[type="button"].btn-block {
 }
 #login .form-group.checkbox input[type="checkbox"],
 #signup .form-group.checkbox input[type="checkbox"],
-#setNewPassword .form-group.checkbox input[type="checkbox"] {
+#setNewPassword .form-group.checkbox input[type="checkbox"],
+#forgotPassword .form-group.checkbox input[type="checkbox"] {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -7317,18 +7332,21 @@ input[type="button"].btn-block {
 }
 #login .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
 #signup .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
-#setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before {
+#setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
+#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before {
   border-color: #2d75fd;
   background: #2d75fd;
 }
 #login .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
 #signup .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
-#setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after {
+#setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
+#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after {
   border-color: #fff;
 }
 #login .form-group.vectto-password .add-on,
 #signup .form-group.vectto-password .add-on,
-#setNewPassword .form-group.vectto-password .add-on {
+#setNewPassword .form-group.vectto-password .add-on,
+#forgotPassword .form-group.vectto-password .add-on {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -7341,32 +7359,38 @@ input[type="button"].btn-block {
 }
 #login .form-group.vectto-password .add-on:hover,
 #signup .form-group.vectto-password .add-on:hover,
-#setNewPassword .form-group.vectto-password .add-on:hover {
+#setNewPassword .form-group.vectto-password .add-on:hover,
+#forgotPassword .form-group.vectto-password .add-on:hover {
   color: #202020;
 }
 #login .form-group.vectto-password input,
 #signup .form-group.vectto-password input,
-#setNewPassword .form-group.vectto-password input {
+#setNewPassword .form-group.vectto-password input,
+#forgotPassword .form-group.vectto-password input {
   padding-right: 45px;
 }
 #login .form-group.vectto-password input:focus ~ .add-on,
 #signup .form-group.vectto-password input:focus ~ .add-on,
-#setNewPassword .form-group.vectto-password input:focus ~ .add-on {
+#setNewPassword .form-group.vectto-password input:focus ~ .add-on,
+#forgotPassword .form-group.vectto-password input:focus ~ .add-on {
   opacity: 1;
 }
 #login .form-group.vectto-password .shown .add-on,
 #signup .form-group.vectto-password .shown .add-on,
-#setNewPassword .form-group.vectto-password .shown .add-on {
+#setNewPassword .form-group.vectto-password .shown .add-on,
+#forgotPassword .form-group.vectto-password .shown .add-on {
   opacity: 1;
 }
 #login a,
 #signup a,
-#setNewPassword a {
+#setNewPassword a,
+#forgotPassword a {
   color: #2d75fd;
 }
 #login button.btn,
 #signup button.btn,
-#setNewPassword button.btn {
+#setNewPassword button.btn,
+#forgotPassword button.btn {
   width: 100%;
   display: block;
   height: 50px;
@@ -7378,14 +7402,16 @@ input[type="button"].btn-block {
 }
 #login .illustration,
 #signup .illustration,
-#setNewPassword .illustration {
+#setNewPassword .illustration,
+#forgotPassword .illustration {
   width: 100%;
   max-width: 496px;
   margin: 0 auto;
 }
 #login .illustration img,
 #signup .illustration img,
-#setNewPassword .illustration img {
+#setNewPassword .illustration img,
+#forgotPassword .illustration img {
   width: 100%;
   height: auto;
 }
@@ -7418,17 +7444,25 @@ input[type="button"].btn-block {
   bottom: 0;
 }
 
-#setNewPassword .illustration {
+#setNewPassword .illustration,
+#forgotPassword .illustration {
   width: 100%;
   max-width: 390px;
   padding-top: 40px;
 }
-#setNewPassword .container {
+#setNewPassword .container,
+#forgotPassword .container {
   max-width: 860px;
 }
-#setNewPassword .vectto-path.top, #setNewPassword .vectto-path.bottom {
+#setNewPassword .vectto-path.top, #setNewPassword .vectto-path.bottom,
+#forgotPassword .vectto-path.top,
+#forgotPassword .vectto-path.bottom {
   margin: 0 auto;
   left: -40px;
+}
+#setNewPassword p,
+#forgotPassword p {
+  font-size: 12px;
 }
 
 /* responsive */
@@ -7453,11 +7487,18 @@ input[type="button"].btn-block {
     right: auto;
   }
 
-  #setNewPassword {
+  #setNewPassword,
+  #forgotPassword {
     padding: 0 15px;
   }
-  #setNewPassword .vectto-path {
+  #setNewPassword .vectto-path,
+  #forgotPassword .vectto-path {
     left: auto !important;
+  }
+
+  #forgotPassword .pull-left,
+  #forgotPassword .pull-right {
+    float: none !important;
   }
 }
 
