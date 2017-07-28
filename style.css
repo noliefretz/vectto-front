@@ -6197,6 +6197,9 @@ input[type="button"].btn-block {
 .single-blog .sns li a.liked {
   color: #2d75fd;
 }
+.single-blog .comment-section {
+  padding-bottom: 50px;
+}
 .single-blog .comment-section .head a, .single-blog .comment-section .head p {
   color: #777;
   text-transform: uppercase;
@@ -6204,6 +6207,7 @@ input[type="button"].btn-block {
 }
 .single-blog .comment-section .body form {
   border: 1px solid #d7d7d7;
+  padding-bottom: 5px;
 }
 .single-blog .comment-section .body form textarea {
   border: 0;
@@ -6226,6 +6230,11 @@ input[type="button"].btn-block {
 .single-blog .comment-section .body form .btn-group .btn-preview {
   text-transform: uppercase;
   color: #777;
+  padding: 0;
+  transition: all 0.8s ease-in-out;
+}
+.single-blog .comment-section .body form .btn-group .btn-preview:hover {
+  color: #000;
 }
 .single-blog .comment-section .body form .btn-group .btn-submit {
   border-radius: 0;
@@ -6239,6 +6248,10 @@ input[type="button"].btn-block {
   padding-left: 15px;
   padding-right: 15px;
   border: 1px solid #2d75fd;
+  transition: all 0.8s ease-in-out;
+}
+.single-blog .comment-section .body form .btn-group .btn-submit:hover {
+  opacity: 0.8;
 }
 
 #free-design-pack {
@@ -6275,6 +6288,32 @@ input[type="button"].btn-block {
   z-index: 1;
   font-size: 20px;
   color: #000000;
+}
+
+/* responsive */
+@media screen and (max-width: 767px) {
+  #blog #blog-holder .blog-item {
+    max-width: 400px;
+    margin: 0 auto 35px auto;
+  }
+}
+@media screen and (max-width: 420px) {
+  .single-blog .comment-section .head > div {
+    width: 100%;
+    float: none;
+  }
+  .single-blog .comment-section .head > div p {
+    margin: 0;
+    padding: 10px 0;
+  }
+  .single-blog .comment-section .head .text-right {
+    text-align: left !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .single-blog blockquote {
+    padding: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
