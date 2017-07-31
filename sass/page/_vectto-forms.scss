@@ -35,12 +35,57 @@
 			right: -5px;
 		}
 	}
+	&.uneven{
+		border-left: 0 !important;
+		border-right: 0 !important;
+		height: auto;
+		> div{
+			height: 66px;
+			width: 100%;
+			&:before{
+				content: '';
+				width: 1px;
+				height: 100%;
+				background: #d7d7d7;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			&:after{
+				content: '';
+				width: 1px;
+				height: 50%;
+				background: #d7d7d7;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		&.top{
+			&:after{
+				top: 50%;
+			}
+		}
+		&.bottom{
+			> div{
+				&:after{
+					top: auto;
+					bottom: 0;
+				}
+			}
+			&:after{
+				top: auto;
+				bottom: 50%;
+			}
+		}
+	}
 }
 
 #login,
 #signup,
 #setNewPassword,
-#forgotPassword{
+#forgotPassword,
+#not-found{
 	padding-top: 50px;
 	h1{
 		margin-bottom: 30px;
@@ -206,7 +251,8 @@
 }
 
 #setNewPassword,
-#forgotPassword{
+#forgotPassword,
+#not-found{
 	.illustration{
 		width: 100%;
 		max-width: 390px;
@@ -224,6 +270,56 @@
 	}
 	p{
 		font-size: 12px;
+	}
+}
+
+.response{
+	.sub-text{
+		max-width: 360px;
+		margin: 0 auto;
+		font-size: 16px !important;
+	}
+	.illustration{
+		max-width: 440px !important;
+	}
+	.btn-primary{
+		width: 160px;
+		height: 50px;
+		line-height: 50px;
+		padding: 0;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 16px;
+		color: #fff !important;
+		font-weight: $bold;
+	}
+}
+
+#not-found{
+	.sub-text{
+		margin: 0 auto;
+		max-width: 330px;
+		font-size: 16px;
+	}
+	.btn{
+		width: 240px;
+		height: 50px;
+		line-height: 50px;
+		padding: 0;
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0 auto;
+	}
+	.vectto-path{
+		max-width: 455px;
+		&.top,
+		&.bottom{
+			left: -20px;
+		}
+	}
+	.illustration{
+		max-width: 458px;
 	}
 }
 

@@ -42,6 +42,13 @@
 
 .flex-content-center { @include flexContent(center); }
 
+/* display */
+.d-none{ display: none !important;  }
+
+.d-block{ display: block !important; }
+
+.d-inlne-block{ display: inline-block !important; }
+
 /*Font weight*/
 
 .bold,
@@ -72,6 +79,7 @@ $brand-primary: #f68f3a !default;
 $brand-secondary: #2d75fd !default;
 $brand-success: $brand-secondary !default;
 $brand-danger: #ff3000 !default;*/
+
 
 /*Padding*/
 .padding        { padding: 10px 15px;}

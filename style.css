@@ -391,7 +391,7 @@ hr {
   margin-top: 18px;
   margin-bottom: 18px;
   border: 0;
-  border-top: 1px solid #afafaf;
+  border-top: 1px solid #cfcfcf;
 }
 
 .sr-only {
@@ -515,6 +515,19 @@ hr {
 .flex-content-center {
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+/* display */
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inlne-block {
+  display: inline-block !important;
 }
 
 /*Font weight*/
@@ -1406,7 +1419,7 @@ h6, .h6 {
 .page-header {
   padding-bottom: 8px;
   margin: 36px 0 18px;
-  border-bottom: 1px solid #afafaf;
+  border-bottom: 1px solid #cfcfcf;
 }
 
 ul,
@@ -1489,7 +1502,7 @@ abbr.initialism {
 blockquote {
   padding: 9px 18px;
   margin: 0 0 18px;
-  border-left: 5px solid #afafaf;
+  border-left: 5px solid #cfcfcf;
 }
 blockquote p {
   font-size: 16.25px;
@@ -1510,7 +1523,7 @@ blockquote small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #afafaf;
+  border-right: 5px solid #cfcfcf;
   border-left: 0;
 }
 blockquote.pull-right p,
@@ -2580,20 +2593,20 @@ output {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(229, 229, 229, 0.6);
 }
 .form-control:-moz-placeholder {
-  color: #afafaf;
+  color: #cfcfcf;
 }
 .form-control::-moz-placeholder {
-  color: #afafaf;
+  color: #cfcfcf;
 }
 .form-control:-ms-input-placeholder {
-  color: #afafaf;
+  color: #cfcfcf;
 }
 .form-control::-webkit-input-placeholder {
-  color: #afafaf;
+  color: #cfcfcf;
 }
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: #afafaf;
+  background-color: #cfcfcf;
 }
 
 textarea.form-control {
@@ -3033,6 +3046,14 @@ textarea.input-xlg {
 .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
   color: #e5e5e5;
   text-decoration: none;
+}
+
+.btn-xlg {
+  padding: 14px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 8px;
+  font-weight: 500;
 }
 
 .btn-lg {
@@ -6296,7 +6317,7 @@ input[type="button"].btn-block {
 }
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
-  background-color: #afafaf;
+  background-color: #cfcfcf;
 }
 .nav > li.disabled > a {
   color: #e5e5e5;
@@ -6308,7 +6329,7 @@ input[type="button"].btn-block {
   cursor: not-allowed;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #afafaf;
+  background-color: #cfcfcf;
   border-color: #f68f3a;
 }
 .nav .open > a .caret, .nav .open > a:hover .caret, .nav .open > a:focus .caret {
@@ -6339,7 +6360,7 @@ input[type="button"].btn-block {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #afafaf #afafaf #ddd;
+  border-color: #cfcfcf #cfcfcf #ddd;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #d7d7d7;
@@ -6833,8 +6854,22 @@ input[type="button"].btn-block {
   color: #333;
 }
 
+.footer-links {
+  padding: 0;
+}
 .footer-links a {
   color: #777777;
+  font-size: 15px;
+  line-height: 1.33;
+  display: block;
+  margin-bottom: 1em;
+}
+
+footer .footer-logo {
+  width: 120px;
+}
+footer .copyright {
+  color: #cfcfcf;
 }
 
 /*@import "glyphicons";
@@ -7214,23 +7249,64 @@ input[type="button"].btn-block {
   top: 0;
   right: -5px;
 }
+.vectto-path.uneven {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  height: auto;
+}
+.vectto-path.uneven > div {
+  height: 66px;
+  width: 100%;
+}
+.vectto-path.uneven > div:before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #d7d7d7;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vectto-path.uneven > div:after {
+  content: '';
+  width: 1px;
+  height: 50%;
+  background: #d7d7d7;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.vectto-path.uneven.top:after {
+  top: 50%;
+}
+.vectto-path.uneven.bottom > div:after {
+  top: auto;
+  bottom: 0;
+}
+.vectto-path.uneven.bottom:after {
+  top: auto;
+  bottom: 50%;
+}
 
 #login,
 #signup,
 #setNewPassword,
-#forgotPassword {
+#forgotPassword,
+#not-found {
   padding-top: 50px;
 }
 #login h1,
 #signup h1,
 #setNewPassword h1,
-#forgotPassword h1 {
+#forgotPassword h1,
+#not-found h1 {
   margin-bottom: 30px;
 }
 #login form,
 #signup form,
 #setNewPassword form,
-#forgotPassword form {
+#forgotPassword form,
+#not-found form {
   max-width: 400px;
   margin: 0 auto;
   padding-bottom: 30px;
@@ -7238,7 +7314,8 @@ input[type="button"].btn-block {
 #login .form-group,
 #signup .form-group,
 #setNewPassword .form-group,
-#forgotPassword .form-group {
+#forgotPassword .form-group,
+#not-found .form-group {
   position: relative;
 }
 #login .form-group input[type="email"],
@@ -7252,7 +7329,10 @@ input[type="button"].btn-block {
 #setNewPassword .form-group input[type="text"],
 #forgotPassword .form-group input[type="email"],
 #forgotPassword .form-group input[type="password"],
-#forgotPassword .form-group input[type="text"] {
+#forgotPassword .form-group input[type="text"],
+#not-found .form-group input[type="email"],
+#not-found .form-group input[type="password"],
+#not-found .form-group input[type="text"] {
   height: 45px;
   width: 100%;
   border: 1px solid #d8d8d8;
@@ -7271,13 +7351,17 @@ input[type="button"].btn-block {
 #setNewPassword .form-group input[type="text"]:focus,
 #forgotPassword .form-group input[type="email"]:focus,
 #forgotPassword .form-group input[type="password"]:focus,
-#forgotPassword .form-group input[type="text"]:focus {
+#forgotPassword .form-group input[type="text"]:focus,
+#not-found .form-group input[type="email"]:focus,
+#not-found .form-group input[type="password"]:focus,
+#not-found .form-group input[type="text"]:focus {
   box-shadow: 0 0 8px #d8d8d8;
 }
 #login .form-group.checkbox,
 #signup .form-group.checkbox,
 #setNewPassword .form-group.checkbox,
-#forgotPassword .form-group.checkbox {
+#forgotPassword .form-group.checkbox,
+#not-found .form-group.checkbox {
   text-align: center;
   padding: 0;
   width: 250px;
@@ -7286,14 +7370,16 @@ input[type="button"].btn-block {
 #login .form-group.checkbox label,
 #signup .form-group.checkbox label,
 #setNewPassword .form-group.checkbox label,
-#forgotPassword .form-group.checkbox label {
+#forgotPassword .form-group.checkbox label,
+#not-found .form-group.checkbox label {
   color: #777;
   display: block;
 }
 #login .form-group.checkbox label:before,
 #signup .form-group.checkbox label:before,
 #setNewPassword .form-group.checkbox label:before,
-#forgotPassword .form-group.checkbox label:before {
+#forgotPassword .form-group.checkbox label:before,
+#not-found .form-group.checkbox label:before {
   content: '';
   width: 15px;
   height: 15px;
@@ -7307,7 +7393,8 @@ input[type="button"].btn-block {
 #login .form-group.checkbox label:after,
 #signup .form-group.checkbox label:after,
 #setNewPassword .form-group.checkbox label:after,
-#forgotPassword .form-group.checkbox label:after {
+#forgotPassword .form-group.checkbox label:after,
+#not-found .form-group.checkbox label:after {
   content: '';
   width: 5px;
   height: 10px;
@@ -7322,7 +7409,8 @@ input[type="button"].btn-block {
 #login .form-group.checkbox input[type="checkbox"],
 #signup .form-group.checkbox input[type="checkbox"],
 #setNewPassword .form-group.checkbox input[type="checkbox"],
-#forgotPassword .form-group.checkbox input[type="checkbox"] {
+#forgotPassword .form-group.checkbox input[type="checkbox"],
+#not-found .form-group.checkbox input[type="checkbox"] {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -7333,20 +7421,23 @@ input[type="button"].btn-block {
 #login .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
 #signup .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
 #setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
-#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before {
+#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
+#not-found .form-group.checkbox input[type="checkbox"]:checked ~ label:before {
   border-color: #2d75fd;
   background: #2d75fd;
 }
 #login .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
 #signup .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
 #setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
-#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after {
+#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
+#not-found .form-group.checkbox input[type="checkbox"]:checked ~ label:after {
   border-color: #fff;
 }
 #login .form-group.vectto-password .add-on,
 #signup .form-group.vectto-password .add-on,
 #setNewPassword .form-group.vectto-password .add-on,
-#forgotPassword .form-group.vectto-password .add-on {
+#forgotPassword .form-group.vectto-password .add-on,
+#not-found .form-group.vectto-password .add-on {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -7360,37 +7451,43 @@ input[type="button"].btn-block {
 #login .form-group.vectto-password .add-on:hover,
 #signup .form-group.vectto-password .add-on:hover,
 #setNewPassword .form-group.vectto-password .add-on:hover,
-#forgotPassword .form-group.vectto-password .add-on:hover {
+#forgotPassword .form-group.vectto-password .add-on:hover,
+#not-found .form-group.vectto-password .add-on:hover {
   color: #202020;
 }
 #login .form-group.vectto-password input,
 #signup .form-group.vectto-password input,
 #setNewPassword .form-group.vectto-password input,
-#forgotPassword .form-group.vectto-password input {
+#forgotPassword .form-group.vectto-password input,
+#not-found .form-group.vectto-password input {
   padding-right: 45px;
 }
 #login .form-group.vectto-password input:focus ~ .add-on,
 #signup .form-group.vectto-password input:focus ~ .add-on,
 #setNewPassword .form-group.vectto-password input:focus ~ .add-on,
-#forgotPassword .form-group.vectto-password input:focus ~ .add-on {
+#forgotPassword .form-group.vectto-password input:focus ~ .add-on,
+#not-found .form-group.vectto-password input:focus ~ .add-on {
   opacity: 1;
 }
 #login .form-group.vectto-password .shown .add-on,
 #signup .form-group.vectto-password .shown .add-on,
 #setNewPassword .form-group.vectto-password .shown .add-on,
-#forgotPassword .form-group.vectto-password .shown .add-on {
+#forgotPassword .form-group.vectto-password .shown .add-on,
+#not-found .form-group.vectto-password .shown .add-on {
   opacity: 1;
 }
 #login a,
 #signup a,
 #setNewPassword a,
-#forgotPassword a {
+#forgotPassword a,
+#not-found a {
   color: #2d75fd;
 }
 #login button.btn,
 #signup button.btn,
 #setNewPassword button.btn,
-#forgotPassword button.btn {
+#forgotPassword button.btn,
+#not-found button.btn {
   width: 100%;
   display: block;
   height: 50px;
@@ -7403,7 +7500,8 @@ input[type="button"].btn-block {
 #login .illustration,
 #signup .illustration,
 #setNewPassword .illustration,
-#forgotPassword .illustration {
+#forgotPassword .illustration,
+#not-found .illustration {
   width: 100%;
   max-width: 496px;
   margin: 0 auto;
@@ -7411,7 +7509,8 @@ input[type="button"].btn-block {
 #login .illustration img,
 #signup .illustration img,
 #setNewPassword .illustration img,
-#forgotPassword .illustration img {
+#forgotPassword .illustration img,
+#not-found .illustration img {
   width: 100%;
   height: auto;
 }
@@ -7445,24 +7544,74 @@ input[type="button"].btn-block {
 }
 
 #setNewPassword .illustration,
-#forgotPassword .illustration {
+#forgotPassword .illustration,
+#not-found .illustration {
   width: 100%;
   max-width: 390px;
   padding-top: 40px;
 }
 #setNewPassword .container,
-#forgotPassword .container {
+#forgotPassword .container,
+#not-found .container {
   max-width: 860px;
 }
 #setNewPassword .vectto-path.top, #setNewPassword .vectto-path.bottom,
 #forgotPassword .vectto-path.top,
-#forgotPassword .vectto-path.bottom {
+#forgotPassword .vectto-path.bottom,
+#not-found .vectto-path.top,
+#not-found .vectto-path.bottom {
   margin: 0 auto;
   left: -40px;
 }
 #setNewPassword p,
-#forgotPassword p {
+#forgotPassword p,
+#not-found p {
   font-size: 12px;
+}
+
+.response .sub-text {
+  max-width: 360px;
+  margin: 0 auto;
+  font-size: 16px !important;
+}
+.response .illustration {
+  max-width: 440px !important;
+}
+.response .btn-primary {
+  width: 160px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+#not-found .sub-text {
+  margin: 0 auto;
+  max-width: 330px;
+  font-size: 16px;
+}
+#not-found .btn {
+  width: 240px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+#not-found .vectto-path {
+  max-width: 455px;
+}
+#not-found .vectto-path.top, #not-found .vectto-path.bottom {
+  left: -20px;
+}
+#not-found .illustration {
+  max-width: 458px;
 }
 
 /* responsive */

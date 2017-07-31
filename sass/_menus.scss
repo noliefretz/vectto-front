@@ -1,5 +1,10 @@
 .footer-links {
+    padding: 0;
     a {
         color: $gray-dark;
+        font-size: $font-size-medium;
+        line-height: $line-height-large;
+        display: block;
+        margin-bottom: 1em;
     }
 }

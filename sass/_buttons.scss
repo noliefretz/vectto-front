@@ -119,6 +119,11 @@
 
 // Button Sizes
 // --------------------------------------------------
+.btn-xlg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-xlarge-vertical, $padding-xlarge-horizontal, $font-size-xlarge, $line-height-xlarge,$border-radius-xlarge);
+  font-weight: 500;
+}
 
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
