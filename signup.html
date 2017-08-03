@@ -56,22 +56,33 @@ and open the template in the editor.
             </nav>
         </header>
 
-        <div id="signup" class="signup">
+        <div id="signup" class="signup vectto-form">
             <div class="container">
 
                 <h1 class="text-center">Sign Up for Vectto</h1>
 
                 <form>
-
+                    
                     <div class="form-group">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="new password">
+                        <input type="text" class="form-control" id="inputName" placeholder="username">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control" id="inputPasswordRetype" placeholder="re-type new password">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="email">
                     </div>
 
-                    <button class="btn btn-primary">Confirm Password</button>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="password">
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" class="form-control" id="keepLogin">
+                        <label for="keepLogin">By creating an account, you agree to Vectto’s <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</label>
+                    </div>
+
+                    <button class="btn btn-primary">Register</button>
+
+                    <p class="text-center">Already have an account? <a href="#">Sign Ip</a>.</p>
 
                 </form>
 

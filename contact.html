@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
 
     <head>
-        <title>Set New Password</title>
+        <title>Contact</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
@@ -56,39 +56,41 @@ and open the template in the editor.
             </nav>
         </header>
 
-        <div id="setNewPassword" class="setNewPassword vectto-form add-top-5">
+        <div id="contactForm" class="contactForm vectto-form add-top-5">
             <div class="container">
 
                 <div class="vectto-path top"></div>
 
                 <div class="row">
 
-                    <duv class="col-sm-6">
+                    <duv class="col-sm-6 pull-right">
                         
-                        <h1 class="text-center">Set New Password</h1>
+                        <h1 class="text-center add-bottom-2">How Can We Help You? Contact Us.</h1>
 
                         <form class="no-pad-bottom">
                             
-                            <div class="form-group vectto-password">
-                                <input type="password" class="form-control" id="inputPassword" placeholder="new password">
-                                <span class="fa fa-eye fa-lg add-on"></span>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputName" placeholder="name">
                             </div>
 
-                            <div class="form-group vectto-password">
-                                <input type="password" class="form-control" id="inputPasswordRetype" placeholder="re-type new password">
-                                <span class="fa fa-eye fa-lg add-on"></span>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="email">
                             </div>
 
-                            <button class="btn btn-primary">Confirm Password</button>
+                            <div class="form-group">
+                                <textarea name="" id="inputMessage" placeholder="message" class="form-control"></textarea>
+                            </div>
+
+                            <button class="btn btn-primary">Submit</button>
 
                         </form>
 
                     </duv>
 
-                    <duv class="col-sm-6">
+                    <duv class="col-sm-6 pull-left d-flex vertical-align-bot flex-content-end ">
                         
                         <div class="illustration">
-                            <img src="img/set-new-pass-illustration.png">
+                            <img src="img/contact-illustration.png">
                         </div>
 
                     </duv>
@@ -101,6 +103,32 @@ and open the template in the editor.
                 <p class="text-center add-top-10">Copyright © 2017 Vectto LLC  with  <span class="fa fa-heart"></span>  from beautiful Bend, Oregon.</p>
 
             </div>
+
+            <!-- ################################################################################################# -->
+            <!--          RESPONSE                                                                                 -->
+            <!-- ################################################################################################# -->
+
+            <div class="container d-none">
+                
+                <div class="response">
+                    
+                    <h1 class="text-center add-bottom-2">Forgot Password? No Problem!</h1>
+
+                    <p class="text-center add-bottom-3 sub-text">An email with instructions to reset your password has been sent to <a href="#">johndoe@gmail.com.</a></p>
+
+                    <div class="illustration add-top-3">
+                        <img src="img/forgot-pass-illustration-02.png">
+                    </div>
+
+                    <a class="btn btn-primary d-block add-top-3">Continue</a>
+
+                    <p class="text-center add-top-6">Copyright © 2017 Vectto LLC  with  <span class="fa fa-heart"></span>  from beautiful Bend, Oregon.</p>
+
+                </div>
+
+            </div>
+
+             <!-- ################################################################################################# -->
 
         </div>
 

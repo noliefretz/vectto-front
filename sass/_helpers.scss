@@ -36,6 +36,8 @@
 
 .vertical-align-top { @include flexVerticalAlign(top); }
 
+.vertical-align-bot { @include flexVerticalAlign(end); }
+
 .flex-content-end { @include flexContent(flex-end); }
 
 .flex-content-start { @include flexContent(flex-start); }
@@ -43,11 +45,20 @@
 .flex-content-center { @include flexContent(center); }
 
 /* display */
+
 .d-none{ display: none !important;  }
 
 .d-block{ display: block !important; }
 
 .d-inlne-block{ display: inline-block !important; }
+
+/* position */
+
+.pos-relative{ position: relative !important; }
+
+.pos-absolute{ position: absolute !important; }
+
+.pos-static{ position: static !important; }
 
 /*Font weight*/
 
@@ -264,6 +275,5 @@ $brand-danger: #ff3000 !default;*/
 .add-right-95 { margin-right: 95px !important; }
 .add-right-10 { margin-right: 100px !important; }
 
-.list-no-style {
-    list-style-type: none;
-}
+.list-no-style { list-style-type: none;}
+.no-radius { border-radius: 0 !important;}

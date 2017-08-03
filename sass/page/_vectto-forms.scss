@@ -81,11 +81,7 @@
 	}
 }
 
-#login,
-#signup,
-#setNewPassword,
-#forgotPassword,
-#not-found{
+.vectto-form{
 	padding-top: 50px;
 	h1{
 		margin-bottom: 30px;
@@ -99,7 +95,8 @@
 		position: relative;
 		input[type="email"],
 		input[type="password"],
-		input[type="text"]{
+		input[type="text"],
+		textarea{
 			height: 45px;
 			width: 100%;
 			border: 1px solid #d8d8d8;
@@ -109,6 +106,10 @@
 			&:focus{
 				box-shadow: 0 0 8px #d8d8d8;
 			}
+		}
+		textarea{
+			height: 120px;
+			resize: none;
 		}
 		&.checkbox{
 			text-align: center;
@@ -224,7 +225,7 @@
 	padding-bottom: 110px;
 	.form-group{
 		&.checkbox{
-			width: 290px;
+			width: 310px;
 		}		
 	}
 	.illustration{
@@ -247,12 +248,13 @@
 			bottom: 0;
 		}
 	}
-
 }
 
 #setNewPassword,
 #forgotPassword,
-#not-found{
+#not-found,
+#contactForm
+{
 	.illustration{
 		width: 100%;
 		max-width: 390px;
@@ -323,6 +325,41 @@
 	}
 }
 
+#contactForm{
+	.pull-left,
+	.pull-right{
+		min-height: 385px;
+	}
+	form{
+		max-width: 470px;
+	}
+	h1{
+		font-size: 24px;
+	}
+	.illustration{
+		max-width: 100%;
+	}
+	.vectto-path{
+		max-width: 450px;
+		height: 25px;
+		&.bottom{
+			left: -10px;
+		}
+		&.top{
+			width: 200px;
+			height: 76px;
+			border-right: 0;
+			left: -120px;
+			bottom: -107px;
+			&:after{
+				right: 0;
+				bottom: auto;
+				top: -5px;
+			}
+		}
+	}
+}
+
 /* responsive */
 
 @media screen and (max-width: 991px){
@@ -334,6 +371,11 @@
 			.right{
 				width: 400px;
 			}
+		}
+	}
+	#contactForm{
+		h1{
+			font-size: 21px;
 		}
 	}
 }
@@ -364,6 +406,37 @@
 		.pull-left,
 		.pull-right{
 			float: none !important;
+		}
+	}
+	#not-found{
+		padding-left: 15px;
+		padding-right: 15px;
+		.pull-left,
+		.pull-right{
+			float: none !important;
+		}
+		.vectto-path{
+			&.top,
+			&.bottom{
+				left: auto;
+			}
+		}
+	}
+	#contactForm{
+		padding-left: 15px;
+		padding-right: 15px;
+		.pull-left,
+		.pull-right{
+			float: none !important;
+			min-height: 100%;
+		}
+		.illustration{
+			max-width: 448px;
+		}
+		.vectto-path {
+			&.top {
+			    display: none;
+			}
 		}
 	}
 }

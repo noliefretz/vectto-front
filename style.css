@@ -308,9 +308,13 @@ table {
     border: 1px solid #ddd !important;
   }
 }
+/*$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);*/
+/*$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);*/
+/*$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);*/
+/*$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);*/
+/*$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);*/
 @font-face {
   font-family: "Aileron Light";
-  src: url("fonts/aileron-light.eot?") format("eot"), url("fonts/aileron-light.woff2") format("woff2"), url("fonts/aileron-light.woff") format("woff"), url("fonts/aileron-light.ttf") format("truetype"), url("fonts/aileron-light.svg#Aileron_Light") format("svg");
 }
 *,
 *:before,
@@ -479,7 +483,7 @@ hr {
 }
 
 /*Flexbox*/
-.d-flex {
+.d-flex, .mobile-phones .phone, .mobile-phones .phone .overlay, .price-card .price {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -488,7 +492,7 @@ hr {
   display: flex;
 }
 
-.vertical-align {
+.vertical-align, .mobile-phones .phone, .mobile-phones .phone .overlay, .price-card .price {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -502,6 +506,13 @@ hr {
   align-items: top;
 }
 
+.vertical-align-bot {
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
 .flex-content-end {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
@@ -512,7 +523,7 @@ hr {
   justify-content: flex-start;
 }
 
-.flex-content-center {
+.flex-content-center, .mobile-phones .phone, .mobile-phones .phone .overlay, .price-card .price {
   -webkit-justify-content: center;
   justify-content: center;
 }
@@ -528,6 +539,19 @@ hr {
 
 .d-inlne-block {
   display: inline-block !important;
+}
+
+/* position */
+.pos-relative {
+  position: relative !important;
+}
+
+.pos-absolute {
+  position: absolute !important;
+}
+
+.pos-static {
+  position: static !important;
 }
 
 /*Font weight*/
@@ -1257,6 +1281,10 @@ $brand-danger: #ff3000 !default;*/
 
 .list-no-style {
   list-style-type: none;
+}
+
+.no-radius {
+  border-radius: 0 !important;
 }
 
 p {
@@ -2913,17 +2941,17 @@ textarea.input-xlg {
 
 .btn-default {
   color: #333;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #ccc;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
   color: #333;
-  background-color: #ebebeb;
+  background-color: transparent;
   border-color: #adadad;
 }
 .open .btn-default.dropdown-toggle {
   color: #333;
-  background-color: #ebebeb;
+  background-color: transparent;
   border-color: #adadad;
 }
 .btn-default:active, .btn-default.active {
@@ -2933,7 +2961,7 @@ textarea.input-xlg {
   background-image: none;
 }
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
-  background-color: #fff;
+  background-color: transparent;
   border-color: #ccc;
 }
 
@@ -6872,6 +6900,190 @@ footer .copyright {
   color: #cfcfcf;
 }
 
+.home-section {
+  position: relative;
+}
+
+#home-illust-1 {
+  position: absolute;
+  top: calc(100% - 225px);
+  width: 100%;
+  overflow: hidden;
+}
+#home-illust-1 .left img {
+  max-width: 427px;
+  width: 100%;
+  height: auto;
+}
+#home-illust-1 .right img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  float: right;
+}
+
+#browser-illust {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  top: 0;
+  max-width: 700px;
+  overflow: hidden;
+}
+#browser-illust img {
+  position: relative;
+  right: -20px;
+}
+
+#phones-section {
+  float: left;
+  position: absolute;
+  width: 100%;
+  left: 25px;
+}
+#phones-section [class^="col-"] {
+  padding: 0;
+}
+
+.mobile-phones .phone {
+  max-width: 175px;
+  height: 175px;
+  width: 100%;
+  float: left;
+  border: 1px solid #d7d7d7;
+  margin-left: 25px;
+  position: relative;
+  overflow: hidden;
+}
+.mobile-phones .phone:first-child {
+  margin-left: 0;
+}
+.mobile-phones .phone .overlay {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.1s ease-in 0.2s;
+  z-index: 40;
+  background: #2d75fd;
+}
+.mobile-phones .phone img {
+  transition: all 0.1s ease;
+  display: block;
+  position: relative;
+  width: 47px;
+}
+.mobile-phones .phone p {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: scale(10);
+  position: relative;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+.mobile-phones .phone:hover .overlay {
+  opacity: .8;
+  transition-delay: 0s;
+}
+.mobile-phones .phone:hover img {
+  opacity: .4;
+  transition-delay: 0s;
+}
+.mobile-phones .phone:hover p {
+  opacity: 1;
+  transform: scale(1);
+  /*transition-delay: 0.2s;*/
+}
+
+.price-card {
+  border: 1px solid #d7d7d7;
+  text-align: center;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.price-card.current {
+  border: none;
+  box-shadow: 0 2px 6px 1px #ccc;
+}
+.price-card.current .price-title {
+  background: #2d75fd;
+  color: #fff;
+}
+.price-card.current .btn {
+  border-color: #2d75fd;
+  color: #2d75fd;
+}
+.price-card .price-title {
+  transition: all .2s ease;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  background: #e5e5e5;
+}
+.price-card .price-body {
+  padding: 25px;
+  background: #fff;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.price-card .price {
+  margin: 0;
+  color: #000;
+}
+.price-card .price .dollar {
+  font-size: 30px;
+}
+.price-card .price .price-value {
+  font-size: 46px;
+  font-weight: 700;
+}
+.price-card .price + p {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.price-card .plan-features {
+  list-style: none;
+  padding: 0;
+}
+.price-card .plan-features p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.price-card .btn {
+  min-width: 110px;
+  transition: all .2s ease;
+}
+
+.coverflow-wrap {
+  position: relative;
+}
+.coverflow-wrap #home-pricing-coverflow {
+  outline: none;
+}
+.coverflow-wrap .navigation-arrow {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+}
+.coverflow-wrap .navigation-arrow span {
+  width: 40px;
+  cursor: pointer;
+  color: #cfcfcf;
+  font-size: 24px;
+  position: absolute;
+}
+.coverflow-wrap .navigation-arrow .move-left {
+  left: -30px;
+}
+.coverflow-wrap .navigation-arrow .move-right {
+  right: -25px;
+}
+
 /*@import "glyphicons";
 @import "dropdowns";
 @import "button-groups";
@@ -7288,51 +7500,24 @@ footer .copyright {
   bottom: 50%;
 }
 
-#login,
-#signup,
-#setNewPassword,
-#forgotPassword,
-#not-found {
+.vectto-form {
   padding-top: 50px;
 }
-#login h1,
-#signup h1,
-#setNewPassword h1,
-#forgotPassword h1,
-#not-found h1 {
+.vectto-form h1 {
   margin-bottom: 30px;
 }
-#login form,
-#signup form,
-#setNewPassword form,
-#forgotPassword form,
-#not-found form {
+.vectto-form form {
   max-width: 400px;
   margin: 0 auto;
   padding-bottom: 30px;
 }
-#login .form-group,
-#signup .form-group,
-#setNewPassword .form-group,
-#forgotPassword .form-group,
-#not-found .form-group {
+.vectto-form .form-group {
   position: relative;
 }
-#login .form-group input[type="email"],
-#login .form-group input[type="password"],
-#login .form-group input[type="text"],
-#signup .form-group input[type="email"],
-#signup .form-group input[type="password"],
-#signup .form-group input[type="text"],
-#setNewPassword .form-group input[type="email"],
-#setNewPassword .form-group input[type="password"],
-#setNewPassword .form-group input[type="text"],
-#forgotPassword .form-group input[type="email"],
-#forgotPassword .form-group input[type="password"],
-#forgotPassword .form-group input[type="text"],
-#not-found .form-group input[type="email"],
-#not-found .form-group input[type="password"],
-#not-found .form-group input[type="text"] {
+.vectto-form .form-group input[type="email"],
+.vectto-form .form-group input[type="password"],
+.vectto-form .form-group input[type="text"],
+.vectto-form .form-group textarea {
   height: 45px;
   width: 100%;
   border: 1px solid #d8d8d8;
@@ -7340,46 +7525,27 @@ footer .copyright {
   box-shadow: none;
   transition: all 0.4s ease-in-out;
 }
-#login .form-group input[type="email"]:focus,
-#login .form-group input[type="password"]:focus,
-#login .form-group input[type="text"]:focus,
-#signup .form-group input[type="email"]:focus,
-#signup .form-group input[type="password"]:focus,
-#signup .form-group input[type="text"]:focus,
-#setNewPassword .form-group input[type="email"]:focus,
-#setNewPassword .form-group input[type="password"]:focus,
-#setNewPassword .form-group input[type="text"]:focus,
-#forgotPassword .form-group input[type="email"]:focus,
-#forgotPassword .form-group input[type="password"]:focus,
-#forgotPassword .form-group input[type="text"]:focus,
-#not-found .form-group input[type="email"]:focus,
-#not-found .form-group input[type="password"]:focus,
-#not-found .form-group input[type="text"]:focus {
+.vectto-form .form-group input[type="email"]:focus,
+.vectto-form .form-group input[type="password"]:focus,
+.vectto-form .form-group input[type="text"]:focus,
+.vectto-form .form-group textarea:focus {
   box-shadow: 0 0 8px #d8d8d8;
 }
-#login .form-group.checkbox,
-#signup .form-group.checkbox,
-#setNewPassword .form-group.checkbox,
-#forgotPassword .form-group.checkbox,
-#not-found .form-group.checkbox {
+.vectto-form .form-group textarea {
+  height: 120px;
+  resize: none;
+}
+.vectto-form .form-group.checkbox {
   text-align: center;
   padding: 0;
   width: 250px;
   margin: 0 auto;
 }
-#login .form-group.checkbox label,
-#signup .form-group.checkbox label,
-#setNewPassword .form-group.checkbox label,
-#forgotPassword .form-group.checkbox label,
-#not-found .form-group.checkbox label {
+.vectto-form .form-group.checkbox label {
   color: #777;
   display: block;
 }
-#login .form-group.checkbox label:before,
-#signup .form-group.checkbox label:before,
-#setNewPassword .form-group.checkbox label:before,
-#forgotPassword .form-group.checkbox label:before,
-#not-found .form-group.checkbox label:before {
+.vectto-form .form-group.checkbox label:before {
   content: '';
   width: 15px;
   height: 15px;
@@ -7390,11 +7556,7 @@ footer .copyright {
   left: 0;
   z-index: 1;
 }
-#login .form-group.checkbox label:after,
-#signup .form-group.checkbox label:after,
-#setNewPassword .form-group.checkbox label:after,
-#forgotPassword .form-group.checkbox label:after,
-#not-found .form-group.checkbox label:after {
+.vectto-form .form-group.checkbox label:after {
   content: '';
   width: 5px;
   height: 10px;
@@ -7406,11 +7568,7 @@ footer .copyright {
   z-index: 2;
   transform: rotate(50deg);
 }
-#login .form-group.checkbox input[type="checkbox"],
-#signup .form-group.checkbox input[type="checkbox"],
-#setNewPassword .form-group.checkbox input[type="checkbox"],
-#forgotPassword .form-group.checkbox input[type="checkbox"],
-#not-found .form-group.checkbox input[type="checkbox"] {
+.vectto-form .form-group.checkbox input[type="checkbox"] {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -7418,26 +7576,14 @@ footer .copyright {
   width: 0;
   height: 0;
 }
-#login .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
-#signup .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
-#setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
-#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:before,
-#not-found .form-group.checkbox input[type="checkbox"]:checked ~ label:before {
+.vectto-form .form-group.checkbox input[type="checkbox"]:checked ~ label:before {
   border-color: #2d75fd;
   background: #2d75fd;
 }
-#login .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
-#signup .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
-#setNewPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
-#forgotPassword .form-group.checkbox input[type="checkbox"]:checked ~ label:after,
-#not-found .form-group.checkbox input[type="checkbox"]:checked ~ label:after {
+.vectto-form .form-group.checkbox input[type="checkbox"]:checked ~ label:after {
   border-color: #fff;
 }
-#login .form-group.vectto-password .add-on,
-#signup .form-group.vectto-password .add-on,
-#setNewPassword .form-group.vectto-password .add-on,
-#forgotPassword .form-group.vectto-password .add-on,
-#not-found .form-group.vectto-password .add-on {
+.vectto-form .form-group.vectto-password .add-on {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -7448,46 +7594,22 @@ footer .copyright {
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-#login .form-group.vectto-password .add-on:hover,
-#signup .form-group.vectto-password .add-on:hover,
-#setNewPassword .form-group.vectto-password .add-on:hover,
-#forgotPassword .form-group.vectto-password .add-on:hover,
-#not-found .form-group.vectto-password .add-on:hover {
+.vectto-form .form-group.vectto-password .add-on:hover {
   color: #202020;
 }
-#login .form-group.vectto-password input,
-#signup .form-group.vectto-password input,
-#setNewPassword .form-group.vectto-password input,
-#forgotPassword .form-group.vectto-password input,
-#not-found .form-group.vectto-password input {
+.vectto-form .form-group.vectto-password input {
   padding-right: 45px;
 }
-#login .form-group.vectto-password input:focus ~ .add-on,
-#signup .form-group.vectto-password input:focus ~ .add-on,
-#setNewPassword .form-group.vectto-password input:focus ~ .add-on,
-#forgotPassword .form-group.vectto-password input:focus ~ .add-on,
-#not-found .form-group.vectto-password input:focus ~ .add-on {
+.vectto-form .form-group.vectto-password input:focus ~ .add-on {
   opacity: 1;
 }
-#login .form-group.vectto-password .shown .add-on,
-#signup .form-group.vectto-password .shown .add-on,
-#setNewPassword .form-group.vectto-password .shown .add-on,
-#forgotPassword .form-group.vectto-password .shown .add-on,
-#not-found .form-group.vectto-password .shown .add-on {
+.vectto-form .form-group.vectto-password .shown .add-on {
   opacity: 1;
 }
-#login a,
-#signup a,
-#setNewPassword a,
-#forgotPassword a,
-#not-found a {
+.vectto-form a {
   color: #2d75fd;
 }
-#login button.btn,
-#signup button.btn,
-#setNewPassword button.btn,
-#forgotPassword button.btn,
-#not-found button.btn {
+.vectto-form button.btn {
   width: 100%;
   display: block;
   height: 50px;
@@ -7497,20 +7619,12 @@ footer .copyright {
   margin: 20px 0;
   transition: all 0.2s ease-in-out;
 }
-#login .illustration,
-#signup .illustration,
-#setNewPassword .illustration,
-#forgotPassword .illustration,
-#not-found .illustration {
+.vectto-form .illustration {
   width: 100%;
   max-width: 496px;
   margin: 0 auto;
 }
-#login .illustration img,
-#signup .illustration img,
-#setNewPassword .illustration img,
-#forgotPassword .illustration img,
-#not-found .illustration img {
+.vectto-form .illustration img {
   width: 100%;
   height: auto;
 }
@@ -7520,7 +7634,7 @@ footer .copyright {
   padding-bottom: 110px;
 }
 #signup .form-group.checkbox {
-  width: 290px;
+  width: 310px;
 }
 #signup .illustration {
   width: 100%;
@@ -7545,27 +7659,32 @@ footer .copyright {
 
 #setNewPassword .illustration,
 #forgotPassword .illustration,
-#not-found .illustration {
+#not-found .illustration,
+#contactForm .illustration {
   width: 100%;
   max-width: 390px;
   padding-top: 40px;
 }
 #setNewPassword .container,
 #forgotPassword .container,
-#not-found .container {
+#not-found .container,
+#contactForm .container {
   max-width: 860px;
 }
 #setNewPassword .vectto-path.top, #setNewPassword .vectto-path.bottom,
 #forgotPassword .vectto-path.top,
 #forgotPassword .vectto-path.bottom,
 #not-found .vectto-path.top,
-#not-found .vectto-path.bottom {
+#not-found .vectto-path.bottom,
+#contactForm .vectto-path.top,
+#contactForm .vectto-path.bottom {
   margin: 0 auto;
   left: -40px;
 }
 #setNewPassword p,
 #forgotPassword p,
-#not-found p {
+#not-found p,
+#contactForm p {
   font-size: 12px;
 }
 
@@ -7614,6 +7733,39 @@ footer .copyright {
   max-width: 458px;
 }
 
+#contactForm .pull-left,
+#contactForm .pull-right {
+  min-height: 385px;
+}
+#contactForm form {
+  max-width: 470px;
+}
+#contactForm h1 {
+  font-size: 24px;
+}
+#contactForm .illustration {
+  max-width: 100%;
+}
+#contactForm .vectto-path {
+  max-width: 450px;
+  height: 25px;
+}
+#contactForm .vectto-path.bottom {
+  left: -10px;
+}
+#contactForm .vectto-path.top {
+  width: 200px;
+  height: 76px;
+  border-right: 0;
+  left: -120px;
+  bottom: -107px;
+}
+#contactForm .vectto-path.top:after {
+  right: 0;
+  bottom: auto;
+  top: -5px;
+}
+
 /* responsive */
 @media screen and (max-width: 991px) {
   #signup .illustration .left {
@@ -7621,6 +7773,10 @@ footer .copyright {
   }
   #signup .illustration .right {
     width: 400px;
+  }
+
+  #contactForm h1 {
+    font-size: 21px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7648,6 +7804,34 @@ footer .copyright {
   #forgotPassword .pull-left,
   #forgotPassword .pull-right {
     float: none !important;
+  }
+
+  #not-found {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #not-found .pull-left,
+  #not-found .pull-right {
+    float: none !important;
+  }
+  #not-found .vectto-path.top, #not-found .vectto-path.bottom {
+    left: auto;
+  }
+
+  #contactForm {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #contactForm .pull-left,
+  #contactForm .pull-right {
+    float: none !important;
+    min-height: 100%;
+  }
+  #contactForm .illustration {
+    max-width: 448px;
+  }
+  #contactForm .vectto-path.top {
+    display: none;
   }
 }
 

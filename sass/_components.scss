@@ -6,3 +6,201 @@ footer {
         color: $gray-lighter;
     }
 }
+.home-section {
+    position: relative;
+}
+#home-illust-1 {
+    position: absolute;
+    top: calc(100% - 225px);
+    width: 100%;
+    overflow: hidden;
+    .left {
+        img {
+            max-width: 427px;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .right {
+        img {
+            max-width: 420px;
+            width: 100%;
+            height: auto;
+            float: right;
+        }
+    }
+}
+#browser-illust {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    top: 0;
+    max-width: 700px;
+    overflow: hidden;
+    img {
+        position: relative;
+        right: -20px;
+    }
+}
+
+#phones-section {
+    float: left;
+    position: absolute;
+    width: 100%;
+    left: 25px;
+    [class^="col-"] {
+        padding: 0;
+    }
+}
+
+.mobile-phones {
+    .phone {
+        @extend .d-flex;
+        @extend .vertical-align;
+        @extend .flex-content-center;
+        max-width: (350 / 2) * 1px;
+        height: (350 / 2) * 1px;
+        width: 100%;
+        float: left;
+        border: 1px solid $gray;
+        margin-left: 25px;
+        position: relative;
+        overflow: hidden;
+        &:first-child {
+            margin-left: 0;
+        }
+        .overlay {
+            position: absolute;
+            width: (350 / 2) * 1px;
+            height: (350 / 2) * 1px;
+            top: 0;
+            left: 0;
+            opacity:0;
+            transition: all 0.1s ease-in 0.2s;
+            z-index: 40;
+            background: $brand-secondary;
+            @extend .d-flex;
+            @extend .vertical-align;
+            @extend .flex-content-center;
+        }
+        img {
+            transition: all 0.1s ease;
+            display: block;
+            position: relative;
+            width: 47px;
+        }
+        p {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transform: scale(10);
+            position: relative;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        &:hover {
+            .overlay {
+                opacity: .8;
+                transition-delay: 0s;
+            }
+            img {
+                opacity: .4;
+                transition-delay: 0s;
+            }
+            p {
+                opacity: 1;
+                transform: scale(1);
+                /*transition-delay: 0.2s;*/
+            }
+        }
+    }
+}
+
+.price-card {
+    border: 1px solid $gray;
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+    border-radius: $border-radius-large;
+    cursor: pointer;
+    &.current {
+        border: none;
+        box-shadow: 0 2px 6px 1px #ccc;
+        .price-title {
+            background: $brand-secondary;
+            color: #fff;
+        }
+        .btn {
+            border-color: $brand-secondary;
+            color: $brand-secondary;
+        }
+    }
+    .price-title {
+        transition: all .2s ease;
+        border-top-right-radius: $border-radius-large;
+        border-top-left-radius: $border-radius-large;
+        background: $gray-light;
+    }
+    .price-body {
+        padding: 25px;
+        background: #fff;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+    .price {
+        margin: 0;
+        @extend .d-flex;
+        @extend .vertical-align;
+        @extend .flex-content-center;
+        color: $black;
+        .dollar {
+            font-size: 30px;
+        }
+        .price-value {
+            font-size: 46px;
+            font-weight: 700;
+        }
+        & + p {
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+    }
+    .plan-features {
+        list-style: none;
+        padding: 0;
+        p {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+    }
+    .btn {
+        min-width: 110px;
+        transition: all .2s ease;
+    }
+}
+
+.coverflow-wrap {
+    position: relative;
+    #home-pricing-coverflow {
+        outline: none;
+    }
+    .navigation-arrow {
+        position: absolute;
+        top: 150px;
+        width: 100%;
+        span {
+            width: 40px;
+            cursor: pointer;
+            color: $gray-lighter;
+            font-size: 24px;
+            position: absolute;
+        }
+        .move-left {
+            left: -30px;
+        }
+        .move-right {
+            right: -25px;
+        }
+    }
+}
